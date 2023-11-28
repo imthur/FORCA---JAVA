@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class jogoDaForca {
+public class JogoDaForca {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -19,7 +19,6 @@ public class jogoDaForca {
             Random random = new Random();
             String palavraSecreta = palavras[random.nextInt(palavras.length)];
 
-            // Verificação se a palavra é uma fruta ou profissão
             boolean ehFruta = Arrays.asList(frutas).contains(palavraSecreta);
             boolean ehProfissao = Arrays.asList(profissoes).contains(palavraSecreta);
 
@@ -42,7 +41,6 @@ public class jogoDaForca {
                 }
                 System.out.println("\nTentativas restantes: " + tentativasRestantes);
 
-                // Exibir dica funcional
                 if (ehFruta) {
                     System.out.println("Dica: É uma fruta!");
                 } else if (ehProfissao) {
